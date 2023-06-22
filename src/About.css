@@ -1,0 +1,95 @@
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: rgb(117, 165, 255);
+}
+
+.about__description {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-family: var(--font-stylish);
+  font-weight: 500;
+  padding: 50px;
+  font-size: 2rem;
+  font-style: bold;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.about__intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+
+.about__skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about__intro > h2 {
+  font-weight: 500;
+}
+
+.about__intro > hr {
+  border: solid 1px white;
+  width: 320px;
+}
+
+.about__skills > h2 {
+  font-weight: 500;
+}
+
+.about__skills > hr {
+  border: solid 1px white;
+  width: 180px;
+}
+
+.about__name {
+  color: rgb(181, 255, 236);
+  margin: 10px 0;
+}
+
+.about__resume {
+  margin: 40px;
+}
+
+.about__resumeLink {
+  color: rgb(181, 255, 236);
+}
+
+
+
+@media (max-width: 1000px) {
+  .about__intro,
+  ul,
+  .about__resume,
+  .about__skills > h3 {
+    font-size: 80%;
+  }
+  .about__resumeLink {
+    font-size: 100%;
+  }
+  .about__description {
+    padding: 0;
+  }
+  .about__skills > hr {
+    border: solid 1px white;
+    width: 80px;
+  }
+}
+
+@media (max-width: 800px) {
+  .about__intro,
+  ul,
+  .about__resume,
+  .about__skills > h3 {
+    font-size: 60%;
+  }
+}
