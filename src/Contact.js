@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import { db } from "./firebase";
-import {
-  addDoc,
-  collection,
-  serverTimestamp,
-} from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import SendIcon from "@mui/icons-material/Send";
 
 function Contact() {
@@ -32,48 +28,50 @@ function Contact() {
   };
 
   return (
-    <div className="contact">
-      <div className="contact__area">
-        <form className="contact__box">
-          <div className="contact__label">NAME</div>
-          <input
-            value={name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-            type="text"
-          />
-          <div className="contact__label">COMPANY</div>
+    <div className="contact__container">
+      <div className="contact">
+        <div className="contact__area">
+          <form className="contact__box">
+            <div className="contact__label">NAME</div>
+            <input
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+              type="text"
+            />
+            <div className="contact__label">COMPANY</div>
 
-          <input
-            value={company}
-            onChange={(e) => {
-              setCompany(e.target.value);
-            }}
-            type="text"
-          />
-          <div className="contact__label">E-MAIL</div>
+            <input
+              value={company}
+              onChange={(e) => {
+                setCompany(e.target.value);
+              }}
+              type="text"
+            />
+            <div className="contact__label">E-MAIL</div>
 
-          <input
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            type="text"
-          />
-          <div className="contact__label">MESSAGE</div>
+            <input
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              type="text"
+            />
+            <div className="contact__label">MESSAGE</div>
 
-          <textarea
-            value={message}
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
-            type="text"
-          />
-          <button className="submitButton" onClick={sendMessage}>
-            <SendIcon />
-          </button>
-        </form>
+            <textarea
+              value={message}
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
+              type="text"
+            />
+            <button className="submitButton" onClick={sendMessage}>
+              <SendIcon />
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

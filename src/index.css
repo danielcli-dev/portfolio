@@ -1,16 +1,41 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100;0,400;0,800;1,100;1,400;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Urbanist&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap");
 
 :root {
   font-size: 16px;
   font-family: var(--font-stylish);
-  font-weight: 200;
-  --font-stylish: "Noto Serif Display", serif;
-  --font-normal: "Roboto", sans-serif;
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
-  --bg-primary: #c4b994;
-  --bg-secondary: #141418;
+  font-weight: 400;
+  --font-stylish: "Playfair Display", serif;
+  --font-normal: "Roboto Slab", serif;
+  --text-stylish: #d65656;
+  --text-normal: #252525;
+  --bg-normal: #2e4dac;
+  --bg-stylish: #ff4800;
   text-decoration: none;
+  
+  height: 100vh;
+  width: 100vw;
+}
+
+.dark {
+  --text-stylish: #fb5a5a;
+  --text-normal: #fffaf8;
+  --bg-normal: #010101;
+  --bg-stylish: #fffaf8;
+  background-color: var(--bg-normal);
+  color: var(--text-normal);
+}
+
+.light {
+  --text-stylish: #da1f1f;
+  --text-normal: #000000;
+  --bg-normal: #fffaf8;
+  --bg-stylish: #1e5be0;
+}
+
+body {
+  background-color: var(--bg-normal);
+  color: var(--text-normal);
 }
 
 * {
@@ -37,32 +62,44 @@
 a,
 a:hover,
 a:visited {
+  color: inherit;
   text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--font-stylish);
+  font-family: var(--font-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */
 
 h1 {
-  font-size: 10rem;
+  font-size: 3rem;
+  font-family: var(--font-stylish);
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+h2 {
+  font-size: 1.25rem;
 }
 
 h3 {
-  font-weight: 500;
-  font-size:2.5rem;
+  /* font-weight: 500; */
+  font-size: 0.75rem;
 }
 
 ul {
   list-style-type: none;
 }
-

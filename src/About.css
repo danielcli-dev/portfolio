@@ -1,9 +1,16 @@
-.about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.about__container {
+  padding: 96px 0;
   flex: 1;
-  background-color: rgb(117, 165, 255);
+}
+
+.about {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex: 1; */
+  /* background-color: rgb(117, 165, 255); */
+  height: 100%;
+  overflow: scroll;
 }
 
 .about__description {
@@ -15,7 +22,7 @@
   padding: 50px;
   font-size: 2rem;
   font-style: bold;
-  color: rgb(255, 255, 255);
+  color: var(--text-normal);
   text-align: center;
 }
 
@@ -63,8 +70,6 @@
 .about__resumeLink {
   color: rgb(181, 255, 236);
 }
-
-
 
 @media (max-width: 1000px) {
   .about__intro,

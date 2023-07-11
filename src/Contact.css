@@ -1,9 +1,16 @@
+.contact__container {
+  padding: 96px 0;
+  flex: 1;
+}
+
 .contact {
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1;
-  background-color: rgb(255, 201, 139);
+  /* background-color: rgb(255, 201, 139); */
+  height: 100%;
+  overflow: hidden;
 }
 
 .contact__area {
