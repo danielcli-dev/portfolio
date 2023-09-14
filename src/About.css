@@ -1,4 +1,7 @@
 .about__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 96px 0;
   flex: 1;
 }
@@ -7,9 +10,9 @@
   /* display: flex; */
   /* justify-content: center; */
   /* align-items: center; */
-  /* flex: 1; */
+  flex: 1;
+  margin-bottom: 15px;
   /* background-color: rgb(117, 165, 255); */
-  height: 100%;
   overflow: scroll;
 }
 
@@ -64,12 +67,26 @@
 }
 
 .about__resume {
-  margin: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 5px 7px;
+  border-radius: 10px;
+  color: var(--bg-normal);
+  background-color: var(--text-stylish);
+  margin-top: 10px;
 }
 
-.about__resumeLink {
-  color: rgb(181, 255, 236);
+.about__resume:hover {
+  filter: brightness(1.2);
 }
+.about__resumeIcon {
+  margin-right: 5px;
+}
+/* .about__resumeLink {
+  color: rgb(181, 255, 236);
+} */
 
 @media (max-width: 1000px) {
   .about__intro,

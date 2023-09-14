@@ -1,9 +1,10 @@
 import React from "react";
 import "./About.css";
+import ArticleIcon from "@mui/icons-material/Article";
 
 function About() {
   return (
-    <div className="about__container">
+    <div className="about__container" id="about">
       <div className="about">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida
         ornare nisi, vitae fermentum mauris luctus vel. In a consectetur ipsum.
@@ -52,6 +53,9 @@ function About() {
         vulputate tincidunt ante, quis aliquet est aliquet in. Phasellus id diam
         nec erat vulputate varius. Nunc sed feugiat urna, eget pellentesque mi.{" "}
       </div>
+        <a className="about__resume" download href="/Daniel Li - Web Developer Resume.pdf">
+          <ArticleIcon className="about__resumeIcon" /> Download Resume (44.7 KB)
+        </a>
     </div>
   );
 }

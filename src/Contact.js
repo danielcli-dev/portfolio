@@ -34,6 +34,7 @@ function Contact() {
           <form className="contact__box">
             <div className="contact__label">NAME</div>
             <input
+              className="contact__input"
               value={name}
               onChange={(e) => {
                 setName(e.target.value);
@@ -43,6 +44,7 @@ function Contact() {
             <div className="contact__label">COMPANY</div>
 
             <input
+              className="contact__input"
               value={company}
               onChange={(e) => {
                 setCompany(e.target.value);
@@ -52,6 +54,7 @@ function Contact() {
             <div className="contact__label">E-MAIL</div>
 
             <input
+              className="contact__input"
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -61,6 +64,7 @@ function Contact() {
             <div className="contact__label">MESSAGE</div>
 
             <textarea
+              className="contact__input"
               value={message}
               onChange={(e) => {
                 setMessage(e.target.value);

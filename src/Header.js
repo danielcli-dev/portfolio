@@ -13,37 +13,21 @@ function Header() {
 
   return (
     <div className="header">
-      <h1 className="header__name">
-        <a href="/">Daniel Li</a>
-      </h1>
+      <div className="header__intro">
+        <h1 className="header__name">
+          <a href="/">Daniel Li</a>
+        </h1>
+        <h2 className="header__title">Web Developer</h2>
+        {/* <p className="header__description">"Ready to build something great."</p> */}
+      </div>
 
-      <h2 className="header__title">Web Developer</h2>
-      <p className="header__description">Ready to build something.</p>
-      {/* <button
-        onClick={() => {
-          body.classList.replace("light", "dark");
-        }}
-      >
-        Dark
-      </button>
-      <button
-        onClick={() => {
-          body.classList.replace("dark", "light");
-        }}
-      >
-        Light
-      </button> */}
       <nav className="nav">
-        {/* include something fun on front page to captivate visitor. theme? maybe a page on all my practice projects. call it a litterbox? or sandbox?
-. RSS Feed? have themes? playground or should i have another section for linking useful tips and tricks and my attempts at them. links also have an email section. return to top button?
-is it worth it to animate things sometimes? do i need to make it assessible? like view reader? list of what i want to learn */}
-
         <Link
           to="/"
           onClick={() => setActive("about")}
           className={`nav__item ${active === "about" ? "active" : null}`}
         >
-          1 / About
+          <strong>ABOUT</strong>
         </Link>
 
         <Link
@@ -51,7 +35,14 @@ is it worth it to animate things sometimes? do i need to make it assessible? lik
           onClick={() => setActive("projects")}
           className={`nav__item ${active === "projects" ? "active" : null}`}
         >
-          2 / Projects
+          <strong>PROJECTS</strong>
+        </Link>
+        <Link
+          to="/contact"
+          onClick={() => setActive("contact")}
+          className={`nav__item ${active === "contact" ? "active" : null}`}
+        >
+          <strong>CONTACT FORM</strong>
         </Link>
       </nav>
 
@@ -72,11 +63,11 @@ is it worth it to animate things sometimes? do i need to make it assessible? lik
           </a>
         </li>
 
-        <li className="footer__item">
+        {/* <li className="footer__item">
           <a download href="/Daniel Li - Web Developer Resume.pdf">
             <ArticleIcon className="footer__icon" />
           </a>
-        </li>
+        </li> */}
         <li className="footer__item">
           <a
             onClick={() => {
