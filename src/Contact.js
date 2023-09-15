@@ -9,7 +9,7 @@ function Contact() {
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
+  const [sent, setSent] = useState("");
   const sendMessage = (e) => {
     e.preventDefault();
 
@@ -73,6 +73,9 @@ function Contact() {
             />
             <button className="submitButton" onClick={sendMessage}>
               <SendIcon />
+              <div className={`submitButtonConfirmed ${sent && "active"}`}>
+                Message Sent
+              </div>
             </button>
           </form>
         </div>

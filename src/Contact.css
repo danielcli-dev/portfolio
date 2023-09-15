@@ -18,37 +18,42 @@
   align-items: flex-start;
   height: 100%;
   width: 100%;
-  /* padding: 50px; */
 }
+
 .contact__box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 0.625rem;
-  width: 100%;
   width: 80%;
 }
 
 .contact__input {
-  color: var(--bg-normal);
+  color: var(--text-normal);
   background-color: var(--text-stylish);
+  font-size: 500;
 }
 .contact__box .contact__label {
-  font-size: 12px;
+  font-size: 18px;
+  font-size: large;
 }
 .contact__box > input {
-  /* font-family: Arial; */
+  font-family: Arial;
   border-radius: 0.5rem;
   padding: 0.625rem;
   margin-bottom: 1.625rem;
   border: none;
   outline: none;
   width: 100%;
+  opacity: 0.9;
+  background-color: transparent;
+  border: solid 2px var(--text-stylish);
+  font-size: large;
 }
 
 .contact__box > textarea {
-  /* font-family: Arial; */
+  font-family: Arial;
   border-radius: 0.5rem;
   padding: 0.625rem;
   margin-bottom: 1.625rem;
@@ -57,6 +62,10 @@
   width: 100%;
   height: 300px;
   resize: none;
+  opacity: 0.9;
+  background-color: transparent;
+  border: solid 2px var(--text-stylish);
+  font-size: large;
 }
 
 .contact__box > input:focus,
@@ -78,6 +87,7 @@ textarea:focus {
   outline: none;
   color: var(--bg-normal);
   transition: all 500ms ease-in-out;
+  position: relative;
 }
 
 .submitButton:hover {
@@ -97,6 +107,20 @@ textarea:focus {
   padding-left: 10px;
   margin-bottom: 5px;
   color: var(--text-normal);
+}
+
+.submitButtonConfirmed {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  left: 60px;
+  position: absolute;
+  width: 100px;
+}
+
+.submitButtonConfirmed.active {
+  display: flex;
+ 
 }
 
 @media (max-width: 1000px) {

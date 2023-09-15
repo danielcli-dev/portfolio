@@ -13,7 +13,8 @@
   flex: 1;
   margin-bottom: 15px;
   /* background-color: rgb(117, 165, 255); */
-  overflow: scroll;
+  overflow-y: scroll;
+  padding: 0 5%;
 }
 
 .about__description {
@@ -75,6 +76,7 @@
   border-radius: 10px;
   color: var(--bg-normal);
   background-color: var(--text-stylish);
+  margin-left: 5%;
   margin-top: 10px;
 }
 

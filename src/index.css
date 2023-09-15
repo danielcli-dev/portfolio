@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Urbanist&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Roboto+Slab:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
@@ -8,16 +7,13 @@
   font-size: 16px;
   font-family: var(--font-stylish);
   font-weight: 400;
-  /* --font-stylish: "Playfair Display", serif; */
   --font-stylish: "Poppins", sans-serif;
   --font-normal: "Poppins", sans-serif;
-  /* --font-normal: "Roboto Slab", serif; */
   --text-stylish: #d65656;
   --text-normal: #252525;
   --bg-normal: #2e4dac;
   --bg-stylish: #ff4800;
   text-decoration: none;
-
   height: 100vh;
   width: 100vw;
 }
@@ -30,7 +26,6 @@
   --bg-normal: #010525;
   --bg-stylish: #fffaf8;
   --bg-shade: lighten(var(--bg-normal), 50%);
-  /* background: linear-gradient(var(--bg-normal), var(--bg-shade)); */
   background-color: linear-gradient(
     var(--bg-normal),
     lighten(var(--bg-normal), 70%)
@@ -60,16 +55,19 @@ body {
 }
 
 *::-webkit-scrollbar {
-  display: none;
-  width: 0.9rem;
+  /* display: none;
+  width: 0.5rem; */
+  width: 0.2rem;
 }
 
 *::-webkit-scrollbar-track {
   background: transparent;
+  /* background: var(--text-normal); */
+  /* background: green; */
 }
 
 *::-webkit-scrollbar-thumb {
-  background: rgb(253, 167, 86);
+  background: var(--text-stylish);
 }
 
 a,
@@ -92,11 +90,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
-
 h1 {
   font-size: 3rem;
   font-family: var(--font-stylish);
@@ -109,7 +102,6 @@ h2 {
 }
 
 h3 {
-  /* font-weight: 500; */
   font-size: 0.75rem;
 }
 

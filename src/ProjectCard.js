@@ -49,15 +49,23 @@ function ProjectCard({ project }) {
       {open && (
         <div className="project__cardExtended">
           <div className="project__cardImageContainer">
-            <img className="project__cardImage" src={project.image} />
+            {project.image ? (
+              <img className="project__cardImage" src={project.image} />
+            ) : (
+              <div className="project__cardImage--null">{project.name}</div>
+            )}
+
             <div className={`project__cardImageOverlay ${!active && "active"}`}>
               click for more details
             </div>
+
             <div
               className={`project__cardImageText ${active && "active"}`}
               onClick={() => setActive(!active)}
             >
-              Description:<br/><br/>
+              Description:
+              <br />
+              <br />
               {project.description}
             </div>
           </div>
