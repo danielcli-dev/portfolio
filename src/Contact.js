@@ -4,7 +4,7 @@ import { db } from "./firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import SendIcon from "@mui/icons-material/Send";
 
-function Contact() {
+function Contact({ active }) {
   const [name, setName] = useState("");
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
@@ -32,7 +32,10 @@ function Contact() {
   };
 
   return (
-    <div className="contact__container" id="contact">
+    <div
+      className={`contact__container ${active == "contact" && "active"}`}
+      id="contact"
+    >
       <h1 className="contact__title mobile-only">Contact</h1>
 
       <div className="contact">

@@ -7,16 +7,18 @@ import RssFeedIcon from "@mui/icons-material/RssFeed";
 import EmailIcon from "@mui/icons-material/Email";
 import ArticleIcon from "@mui/icons-material/Article";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import Footer from "./Footer";
 
-function Header() {
-  const [active, setActive] = useState("about");
+function Header({ active, setActive }) {
   const [open, setOpen] = useState(false);
 
   return (
     <div className="header">
       <div className="header__intro">
         <a href="/">
-          <img className="header__icon" src="favicon-32x32.png" />
+          <div className="header__icon">dl</div>
+          {/* <img src="favicon-32x32.png" /> */}
+
           <h1 className="header__name">Daniel Li</h1>
         </a>
         {/* <img src="menu-icon.svg" /> */}
@@ -42,7 +44,7 @@ function Header() {
 
       <nav className={`nav ${open && "open"}`}>
         <Link
-          to="/#about"
+          to="/"
           onClick={() => setActive("about")}
           className={`nav__item ${active === "about" ? "active" : null}`}
         >
@@ -50,14 +52,14 @@ function Header() {
         </Link>
 
         <Link
-          to="/#projects"
+          to="/"
           onClick={() => setActive("projects")}
           className={`nav__item ${active === "projects" ? "active" : null}`}
         >
           <strong>PROJECTS</strong>
         </Link>
         <Link
-          to="/#contact"
+          to="/"
           onClick={() => setActive("contact")}
           className={`nav__item ${active === "contact" ? "active" : null}`}
         >
@@ -65,7 +67,10 @@ function Header() {
         </Link>
       </nav>
 
-      <ul className="footer">
+      <div className="header__footer">
+        <Footer />
+      </div>
+      {/* <ul className="footer">
         <li className="footer__item">
           <a href="https://github.com/danielcli-dev" target="_blank">
             <GitHubIcon className="footer__icon" />
@@ -82,11 +87,6 @@ function Header() {
           </a>
         </li>
 
-        {/* <li className="footer__item">
-          <a download href="/Daniel Li - Web Developer Resume.pdf">
-            <ArticleIcon className="footer__icon" />
-          </a>
-        </li> */}
         <li className="footer__item">
           <a
             onClick={() => {
@@ -101,7 +101,7 @@ function Header() {
             <LightModeIcon className="footer__icon" />
           </a>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 }

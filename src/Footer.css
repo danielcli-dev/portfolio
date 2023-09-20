@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  align-items: flex-end;
+}
+
+.footer__item > a > .footer__icon {
+  opacity: 75%;
+  transition: transform 500ms ease-in-out;
+}
+.footer__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.footer__item:hover > a > .footer__icon {
+  opacity: 100%;
+  color: var(--text-stylish);
+  transform: translateY(-10px);
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    display: flex;
+  }
+}

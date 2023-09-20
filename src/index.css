@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Roboto+Slab:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
 :root {
   font-size: 16px;
   font-family: var(--font-stylish);
@@ -15,7 +15,6 @@
   --bg-stylish: #ff4800;
   text-decoration: none;
   --bg-shade: rgba(43, 56, 97, 0.678);
-
 }
 
 .dark {
@@ -38,7 +37,7 @@
   --shadow-normal: rgba(0, 0, 0, 0.065);
   --bg-normal: rgb(254, 247, 247);
   --bg-stylish: #1e5be0;
-  --bg-shade: rgba(254, 247, 247, 0.663);
+  --bg-shade: rgb(254, 238, 222);
 }
 
 * {
@@ -108,11 +107,18 @@ ul {
   list-style-type: none;
 }
 
+.desktop-only {
+  display: flex;
+}
+
 .mobile-only {
   display: none;
 }
 
 @media (max-width: 1024px) {
+  .desktop-only {
+    display: none;
+  }
   .mobile-only {
     display: flex;
   }

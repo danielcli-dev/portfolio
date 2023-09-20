@@ -2,9 +2,12 @@ import React from "react";
 import "./About.css";
 import ArticleIcon from "@mui/icons-material/Article";
 
-function About() {
+function About({ active }) {
   return (
-    <div className="about__container" id="about">
+    <div
+      className={`about__container ${active == "about" && "active"}`}
+      id="about"
+    >
       <div className="about">
         <div class="about__portrait">
           <img
@@ -14,7 +17,7 @@ function About() {
         photograph of me"
           />
         </div>
-        <h1 className="about__title mobile-only">Hey You!</h1>
+        <h1 className="about__title mobile-only">Hello!</h1>
         My name is Daniel and I am looking to build some great websites and
         apps. I used to be a structural engineer which was pretty cool, but I
         always wanted to work in the tech field. It's really amazing what you

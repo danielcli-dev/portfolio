@@ -8,16 +8,17 @@ a {
   flex-direction: column;
   flex: 1;
   /* padding: 3%; */
-  padding-bottom: 2vw;
   background-color: var(--bg-normal);
-  /* background-color: green; */
-  padding: 4vw 6vw;
+  padding: 3vw;
+  height: 85%;
+  background-color: red;
 }
 
 .header__intro {
   display: flex;
   flex-direction: column;
   flex: 1;
+  background: pink;
 }
 .header__name {
   margin-bottom: 6px;
@@ -31,6 +32,11 @@ a {
 }
 
 .header__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: "Leckerli One", cursive;
   display: none;
   width: 40px;
   height: 40px;
@@ -74,26 +80,13 @@ a {
 .quotecard__image {
   border-radius: 50%;
 }
-.footer {
+
+.header__footer {
   display: flex;
-  flex-direction: row;
   flex: 1;
+  justify-content: flex-start;
   align-items: flex-end;
 }
-.footer__item > a > .footer__icon {
-  opacity: 75%;
-  transition: transform 500ms ease-in-out;
-}
-.footer__item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.footer__item:hover > a > .footer__icon {
-  opacity: 100%;
-  color: var(--text-stylish);
-  transform: translateY(-10px);
-}
-
 @media (max-width: 1024px) {
   .header {
     flex: none;
@@ -108,6 +101,13 @@ a {
     top: 0;
     left: 0;
     z-index: 100;
+    height: initial;
+    padding: 4vw 6vw;
+
+  }
+
+  .header__footer {
+    display: none;
   }
   .header__intro {
     /* padding: 10px 0; */
@@ -148,7 +148,7 @@ a {
     display: flex;
   }
 
-  .footer {
+  .header > .footer {
     display: none;
   }
 }

@@ -3,9 +3,14 @@
   flex: 1;
   width: 100%;
   padding-bottom: 3%;
-  padding: 6vw;
+  padding: 3vw;
+  display: none;
+  height: 85%;
 }
 
+.contact__container.active {
+  display: flex;
+}
 .contact {
   display: flex;
   justify-content: center;
@@ -66,7 +71,7 @@
   border: none;
   outline: none;
   width: 100%;
-  height: 300px;
+  height: clamp(100px, 5vh, 300px);
   resize: none;
   opacity: 0.9;
   background-color: transparent;
@@ -129,9 +134,15 @@ textarea:focus {
 }
 
 @media (max-width: 1024px) {
+  .contact__container {
+    display: flex;
+    flex-direction: column;
+    padding: 6vw;
+    height: fit-content;
+  }
   .contact {
     flex: none;
-    height: 80vh;
+    /* height: 80vh; */
   }
 
   .contact__area {
@@ -146,6 +157,5 @@ textarea:focus {
   }
   .contact__box .contact__label {
     font-size: 14px;
-  
   }
 }

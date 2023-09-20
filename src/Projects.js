@@ -5,7 +5,7 @@ import ReactIcon from "./react-icon.svg";
 import JavascriptIcon from "./javascript-icon.svg";
 import CSSIcon from "./css-icon.svg";
 
-function Projects() {
+function Projects({ active }) {
   let projectList = [
     {
       url: "https://danielcli-dev.github.io/meet/",
@@ -178,9 +178,12 @@ function Projects() {
   ];
 
   return (
-    <div className="projects__container" id="projects">
+    <div
+      className={`projects__container ${active == "projects" && "active"}`}
+      id="projects"
+    >
       <div className="projects">
-      <h1 className="projects__title mobile-only">Projects</h1>
+        <h1 className="projects__title mobile-only">Projects</h1>
 
         {projectList.map((project) => {
           return (

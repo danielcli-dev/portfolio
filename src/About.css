@@ -1,21 +1,22 @@
 .about__container {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
-  /* padding-bottom: 10vw; */
-  padding: 6vw;
+  height: 85%;
+  padding: 3vw;
+  overflow: scroll;
+}
+
+.about__container.active {
+  display: flex;
 }
 
 .about {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
   width: 100%;
   flex: 1;
   margin-bottom: 15px;
   overflow-y: scroll;
-  /* padding: 3%; */
 }
 
 .about__title {
@@ -47,13 +48,14 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: 35px;
 }
 
 .about__portraitIcon {
-  background-color: green;
+  background-color: var(--text-stylish);
   border-radius: 50%;
-  width: clamp(250px, 40vw, 300px);
-  height: clamp(250px, 40vw, 300px);
+  width: clamp(200px, 40vw, 250px);
+  height: clamp(200px, 40vw, 250px);
 }
 .about__skills {
   display: flex;
@@ -125,18 +127,24 @@
     width: 80px;
   }
   .about__container {
-    /* height: 100vh; */
-    /* testing */
-    /* display: none; */
-    /* background-color: yellow; */
+    display: flex;
+    padding: 6vw;
+    overflow: initial;
+  }
+  .about {
+    display: block;
+    overflow-y: hidden;
+  }
+  .about__portrait {
+    margin-bottom: 15px;
   }
 }
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   .about__intro,
   ul,
   .about__resume,
   .about__skills > h3 {
     font-size: 60%;
   }
-}
+} */
