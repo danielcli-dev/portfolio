@@ -6,12 +6,12 @@ function About({ active }) {
   return (
     <div
       className={`about__container ${active === "about" && "active"}`}
-      id="about"
+      
     >
       <div className="about">
-        <div class="about__portrait">
+        <div className="about__portrait">
           <img
-            class="about__portraitIcon"
+            className="about__portraitIcon"
             src="https://api.dicebear.com/5.x/pixel-art/svg?seed=Scooter"
             alt="A
         photograph of me"

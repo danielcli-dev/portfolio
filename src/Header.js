@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -8,20 +8,41 @@ import EmailIcon from "@mui/icons-material/Email";
 import ArticleIcon from "@mui/icons-material/Article";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import Footer from "./Footer";
+import ColorLensIcon from "@mui/icons-material/ColorLens";
+import CloseIcon from "@mui/icons-material/Close";
 
-function Header({ active, setActive }) {
+function Header({ active, setActive, scrollToView }) {
   const [open, setOpen] = useState(false);
+  const ref = useRef();
+
+  window.onresize = () => {
+    setOpen(false);
+  };
+
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (open && ref.current && !ref.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", checkIfClickedOutside);
+
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, [open]);
 
   return (
-    <div className="header">
+    <div className="header" id="header">
       <div className="header__intro">
         <a href="/">
           <div className="header__icon">dl</div>
-          {/* <img src="favicon-32x32.png" /> */}
 
           <h1 className="header__name">Daniel Li</h1>
         </a>
-        {/* <img src="menu-icon.svg" /> */}
 
         <svg
           className="header__menu"
@@ -42,29 +63,59 @@ function Header({ active, setActive }) {
         {/* <p className="header__description">"Ready to build something great."</p> */}
       </div>
 
-      <nav className={`nav ${open && "open"}`}>
+      <nav className={`nav ${open && "open"}`} id="clickbox" ref={ref}>
+        <div className="nav__close mobile-only">
+          <CloseIcon
+            className="nav__closeIcon"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          />
+        </div>
         <Link
-          to="/"
-          onClick={() => setActive("about")}
+          to="#"
+          onClick={() => {
+            scrollToView("about");
+            setActive("about");
+            setOpen(!open);
+          }}
           className={`nav__item ${active === "about" ? "active" : null}`}
         >
           <strong>ABOUT</strong>
         </Link>
 
         <Link
-          to="/"
-          onClick={() => setActive("projects")}
+          to="#"
+          onClick={() => {
+            scrollToView("projects");
+            setActive("projects");
+            setOpen(!open);
+          }}
           className={`nav__item ${active === "projects" ? "active" : null}`}
         >
           <strong>PROJECTS</strong>
         </Link>
         <Link
-          to="/"
-          onClick={() => setActive("contact")}
+          to="#"
+          onClick={() => {
+            setActive("contact");
+            setOpen(!open);
+          }}
           className={`nav__item ${active === "contact" ? "active" : null}`}
         >
           <strong>CONTACT FORM</strong>
         </Link>
+        {/* <a
+          className="nav__resume"
+          download
+          href="/Daniel Li - Web Developer Resume.pdf"
+        >
+          <ArticleIcon className="about__resumeIcon" />
+          <p className="about__resumeText">Resume</p>
+        </a> */}
+        <div className="nav__footer mobile-only">
+          <Footer />
+        </div>
       </nav>
 
       <div className="header__footer">

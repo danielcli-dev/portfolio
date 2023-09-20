@@ -9,21 +9,43 @@ import Footer from "./Footer";
 
 function App() {
   const [active, setActive] = useState("about");
+  function scrollToView(id) {
+    // let top =
+    //   document.getElementById(id).offsetTop -
+    //   document.getElementById("header").offsetHeight -
+    //   10;
 
+    // setTimeout(() => {
+    //   window.scrollTop(top);
+    // }, 1000);
+    // console.log("running");
+    let element = document.getElementById(id);
+    console.log("element is", element);
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+    return false;
+  }
   return (
     <div id="app__container" className="app__container dark">
       <div id="app" className="app">
         <Router>
-          <Header active={active} setActive={setActive} />
+          <Header
+            active={active}
+            setActive={setActive}
+            scrollToView={scrollToView}
+            id="header"
+          />
           <Routes>
             {/* <Route path="/" element={<About />} /> */}
             <Route
               path="/"
               element={
                 <>
-                  <About active={active} />
-                  <Projects active={active} />
-                  <Contact active={active} />
+                  <About active={active} id="about" />
+                  <Projects active={active} id="projects" />
+                  <Contact active={active} id="contact" />
                   <div className="app__footer mobile-only">
                     <Footer active={active} />
                   </div>

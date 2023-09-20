@@ -43,13 +43,13 @@
   font-size: medium;
   padding: 0 0 15px 0;
 }
-.project__divider {
+.projects__divider {
   display: none;
 
   /* width: 100%; */
   /* border-bottom: solid 1px rgba(24, 24, 24, 0.049); */
 }
-.project__divider:not(:last-child) {
+.projects__divider:not(:last-child) {
   /* margin: 15px auto; */
   width: 100%;
   /* border-bottom: solid 1px var(--text-stylish); */
@@ -71,7 +71,7 @@
     width: 100%;
     overflow-y: initial;
   }
-  .project__divider:not(:last-child) {
+  .projects__divider:not(:last-child) {
     margin: 3px auto;
     /* width: 95%;
     border-bottom: solid 1px var(--text-stylish);

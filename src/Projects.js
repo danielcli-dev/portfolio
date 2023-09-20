@@ -296,7 +296,7 @@ function Projects({ active }) {
   return (
     <div
       className={`projects__container ${active === "projects" && "active"}`}
-      id="projects"
+    
     >
       <div className="projects">
         <h1 className="projects__title mobile-only">Projects</h1>
@@ -305,7 +305,7 @@ function Projects({ active }) {
           return (
             <>
               <ProjectCard project={project} />{" "}
-              <hr className="project__divider" />
+              <hr className="projects__divider" />
             </>
           );
         })}
