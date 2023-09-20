@@ -131,25 +131,14 @@
     display: flex;
     padding: 6vw;
     height: fit-content;
+    margin-top: clamp(6vw, 20vw, 100px);
     margin-bottom: 10px;
-    /* overflow: visible; */
   }
   .about {
     display: flex;
-
-    /* overflow: visible;
-    height:fit-content */
   }
   .about__portrait {
     margin-bottom: 15px;
   }
 }
 
-/* @media (max-width: 800px) {
-  .about__intro,
-  ul,
-  .about__resume,
-  .about__skills > h3 {
-    font-size: 60%;
-  }
-} */

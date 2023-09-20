@@ -26,12 +26,6 @@
   --bg-normal2: #05093cf4;
   --bg-stylish: #fffaf8;
   --bg-shade: rgba(255, 255, 255, 0.073);
-  /* --bg-shade: rgba(47, 51, 84, 0.663); */
-  background-color: linear-gradient(
-    var(--bg-normal),
-    lighten(var(--bg-normal), 70%)
-  );
-  color: var(--text-normal);
 
 }
 
@@ -40,9 +34,9 @@
   --text-normal: rgb(0, 0, 0);
   --shadow-normal: rgba(0, 0, 0, 0.065);
   --bg-normal: rgb(253, 253, 253);
-  --bg-normal2: rgb(221, 221, 221);
+  --bg-normal2: rgb(255, 214, 214);
   --bg-stylish: #1e5be0;
-  --bg-shade: rgb(254, 238, 222);
+  --bg-shade: rgba(253, 243, 233, 0.721);
 }
 
 * {
@@ -79,11 +73,6 @@ a:hover {
   text-decoration: none;
   cursor: pointer;
 }
-
-/* body {
-  background-color: var(--bg-normal);
-  color: var(--text-normal);
-} */
 
 body {
   margin: 0;

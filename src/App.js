@@ -10,52 +10,32 @@ import Footer from "./Footer";
 function App() {
   const [active, setActive] = useState("about");
   function scrollToView(id) {
-    // let top =
-    //   document.getElementById(id).offsetTop -
-    //   document.getElementById("header").offsetHeight -
-    //   10;
+    let top =
+      document.getElementById(id).offsetTop -
+      document.getElementById("header").offsetHeight;
 
-    // setTimeout(() => {
-    //   window.scrollTop(top);
-    // }, 1000);
-    // console.log("running");
-    let element = document.getElementById(id);
-    console.log("element is", element);
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-    return false;
+    if (id === "about") {
+      window.scrollTo(0, 0);
+    } else {
+      window.scrollTo(0, top);
+    }
   }
   return (
     <div id="app__container" className="app__container dark">
       <div id="app" className="app">
-        <Router>
-          <Header
-            active={active}
-            setActive={setActive}
-            scrollToView={scrollToView}
-            id="header"
-          />
-          <Routes>
-            {/* <Route path="/" element={<About />} /> */}
-            <Route
-              path="/"
-              element={
-                <>
-                  <About active={active} id="about" />
-                  <Projects active={active} id="projects" />
-                  <Contact active={active} id="contact" />
-                  <div className="app__footer mobile-only">
-                    <Footer active={active} />
-                  </div>
-                </>
-              }
-            />
-            {/* <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} /> */}
-          </Routes>
-        </Router>
+        <Header
+          active={active}
+          setActive={setActive}
+          scrollToView={scrollToView}
+        />
+
+        <About active={active} />
+        <Projects active={active} />
+        <Contact active={active} />
+
+        <div className="app__footer mobile-only">
+          <Footer active={active} />
+        </div>
       </div>
     </div>
   );

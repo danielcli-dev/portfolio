@@ -72,8 +72,7 @@ function Header({ active, setActive, scrollToView }) {
             }}
           />
         </div>
-        <Link
-          to="#"
+        <div
           onClick={() => {
             scrollToView("about");
             setActive("about");
@@ -82,10 +81,9 @@ function Header({ active, setActive, scrollToView }) {
           className={`nav__item ${active === "about" ? "active" : null}`}
         >
           <strong>ABOUT</strong>
-        </Link>
+        </div>
 
-        <Link
-          to="#"
+        <div
           onClick={() => {
             scrollToView("projects");
             setActive("projects");
@@ -94,25 +92,19 @@ function Header({ active, setActive, scrollToView }) {
           className={`nav__item ${active === "projects" ? "active" : null}`}
         >
           <strong>PROJECTS</strong>
-        </Link>
-        <Link
-          to="#"
+        </div>
+        <div
+          href="/"
           onClick={() => {
+            scrollToView("contact");
             setActive("contact");
             setOpen(!open);
           }}
           className={`nav__item ${active === "contact" ? "active" : null}`}
         >
           <strong>CONTACT FORM</strong>
-        </Link>
-        {/* <a
-          className="nav__resume"
-          download
-          href="/Daniel Li - Web Developer Resume.pdf"
-        >
-          <ArticleIcon className="about__resumeIcon" />
-          <p className="about__resumeText">Resume</p>
-        </a> */}
+        </div>
+
         <div className="nav__footer mobile-only">
           <Footer />
         </div>

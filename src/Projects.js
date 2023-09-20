@@ -295,8 +295,8 @@ function Projects({ active }) {
 
   return (
     <div
-      className={`projects__container ${active === "projects" && "active"}`}
-    
+      id="projects"
+      className={`projects__container ${active === "projects" ? "active" : ""}`}
     >
       <div className="projects">
         <h1 className="projects__title mobile-only">Projects</h1>
