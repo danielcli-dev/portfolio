@@ -10,20 +10,39 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 
 function Header() {
   const [active, setActive] = useState("about");
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="header">
       <div className="header__intro">
-        <h1 className="header__name">
-          <a href="/">Daniel Li</a>
-        </h1>
+        <a href="/">
+          <img className="header__icon" src="favicon-32x32.png" />
+          <h1 className="header__name">Daniel Li</h1>
+        </a>
+        {/* <img src="menu-icon.svg" /> */}
+
+        <svg
+          className="header__menu"
+          onClick={() => {
+            setOpen(!open);
+          }}
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="100"
+          height="100"
+          viewBox="0 0 30 30"
+        >
+          <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
+        </svg>
+
         <h2 className="header__title">Web Developer</h2>
         {/* <p className="header__description">"Ready to build something great."</p> */}
       </div>
 
-      <nav className="nav">
+      <nav className={`nav ${open && "open"}`}>
         <Link
-          to="/"
+          to="/#about"
           onClick={() => setActive("about")}
           className={`nav__item ${active === "about" ? "active" : null}`}
         >
@@ -31,14 +50,14 @@ function Header() {
         </Link>
 
         <Link
-          to="/projects"
+          to="/#projects"
           onClick={() => setActive("projects")}
           className={`nav__item ${active === "projects" ? "active" : null}`}
         >
           <strong>PROJECTS</strong>
         </Link>
         <Link
-          to="/contact"
+          to="/#contact"
           onClick={() => setActive("contact")}
           className={`nav__item ${active === "contact" ? "active" : null}`}
         >

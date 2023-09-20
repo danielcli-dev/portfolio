@@ -30,15 +30,14 @@ function ProjectCard({ project }) {
                     width: "object-fit",
                   }}
                 >
-                  <svg
-                    className="projects__techIcon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="1.5em"
-                    viewBox="0 0 512 512"
-                    fill="lightblue"
-                  >
-                    <path d={tech.path} />
-                  </svg>
+                  {tech.icon && (
+                    <img
+                      className="projects__techIcon"
+                      src={tech.icon}
+                      alt={`${tech.name} icon`}
+                    />
+                  )}
+
                   {tech.name}
                 </li>
               );

@@ -1,5 +1,4 @@
 a {
-  /* color: rgb(243, 243, 243); */
   transition: all 200ms ease-in-out;
   border-bottom: solid 1px transparent;
 }
@@ -8,24 +7,41 @@ a {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 96px 0;
-  /* color: var(--text-normal); */
+  /* padding: 3%; */
+  padding-bottom: 2vw;
+  background-color: var(--bg-normal);
+  /* background-color: green; */
+  padding: 4vw 6vw;
 }
 
 .header__intro {
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
 .header__name {
   margin-bottom: 6px;
 }
 .header__title {
-  /* margin: 10px 0; */
   margin-left: 5px;
 }
 .header__description {
   margin: 10px 0;
   margin-left: 5px;
 }
+
+.header__icon {
+  display: none;
+  width: 40px;
+  height: 40px;
+}
+.header__menu {
+  display: none;
+  width: 40px;
+  height: 40px;
+  fill: var(--text-normal);
+}
+
 .nav {
   display: flex;
   flex: 1;
@@ -78,52 +94,61 @@ a {
   transform: translateY(-10px);
 }
 
-/* display: block;
-   content: '';
-  width: 100%;
-  height: 1px;
-  background: black;
-  position: absolute;
-  bottom: 0;
-  left: 0; */
-/* 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .header {
     flex: none;
-    height: 8vh;
-    position: absolute;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    /* justify-content: space-between; */
+    /* justify-content: center; */
+    justify-content: flex-start;
+    /* test */
+    align-items: flex-start;
+    width: 100%;
+    /* position: relative; */
+    position: sticky;
+    top: 0;
     left: 0;
-    right: 0;
+    z-index: 100;
   }
-
-  .nav {
+  .header__intro {
+    /* padding: 10px 0; */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     flex-direction: row;
-    align-items: space-between;
-    width: 95%;
-    padding: 0 20px;
+  }
+  .header__name {
+    display: none;
+    margin-bottom: 2px;
+    line-height: 1;
+  }
+  .header__title {
+    display: none;
   }
 
-  a {
-    font-size: 50%;
+  .header__icon {
+    flex-direction: row;
+    display: flex;
   }
 
-  .active {
-    zoom: 1;
-    line-height: 30px;
-    cursor: default;
+  .header__menu {
+    display: block;
+    cursor: pointer;
   }
-} */
+  .nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 300px;
+    z-index: 1000;
+    display: none;
+  }
 
-/* .box {
-  width: 100px;
-  height: 100px;
-  background-color: green;
+  .nav.open {
+    display: flex;
+  }
+
+  .footer {
+    display: none;
+  }
 }
-
-.box:hover {
-  background-color: yellow;
-} */

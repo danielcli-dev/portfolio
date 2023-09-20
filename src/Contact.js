@@ -9,7 +9,7 @@ function Contact() {
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [sent, setSent] = useState("");
+  const [sent, setSent] = useState(false);
   const sendMessage = (e) => {
     e.preventDefault();
 
@@ -25,14 +25,20 @@ function Contact() {
     setCompany("");
     setEmail("");
     setMessage("");
+    setSent(true);
+    setTimeout(() => {
+      setSent(false);
+    }, 2000);
   };
 
   return (
-    <div className="contact__container">
+    <div className="contact__container" id="contact">
+      <h1 className="contact__title mobile-only">Contact</h1>
+
       <div className="contact">
         <div className="contact__area">
           <form className="contact__box">
-            <div className="contact__label">NAME</div>
+            <div className="contact__label">name</div>
             <input
               className="contact__input"
               value={name}
@@ -41,7 +47,7 @@ function Contact() {
               }}
               type="text"
             />
-            <div className="contact__label">COMPANY</div>
+            <div className="contact__label">company</div>
 
             <input
               className="contact__input"
@@ -51,7 +57,7 @@ function Contact() {
               }}
               type="text"
             />
-            <div className="contact__label">E-MAIL</div>
+            <div className="contact__label">e-mail</div>
 
             <input
               className="contact__input"
@@ -61,7 +67,7 @@ function Contact() {
               }}
               type="text"
             />
-            <div className="contact__label">MESSAGE</div>
+            <div className="contact__label">message</div>
 
             <textarea
               className="contact__input"
@@ -73,7 +79,7 @@ function Contact() {
             />
             <button className="submitButton" onClick={sendMessage}>
               <SendIcon />
-              <div className={`submitButtonConfirmed ${sent && "active"}`}>
+              <div className={`submitButtonConfirmed ${sent ? "active" : ""}`}>
                 Message Sent
               </div>
             </button>

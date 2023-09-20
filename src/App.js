@@ -13,9 +13,20 @@ function App() {
         <Router>
           <Header />
           <Routes>
-            <Route path="/" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
+            {/* <Route path="/" element={<About />} /> */}
+            <Route
+              path="/"
+              element={
+                <>
+                  <About />
+                  <Projects />
+                  <Contact />
+                  
+                </>
+              }
+            />
+            {/* <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} /> */}
           </Routes>
         </Router>
       </div>
