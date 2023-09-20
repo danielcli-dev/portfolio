@@ -5,7 +5,7 @@ import ArticleIcon from "@mui/icons-material/Article";
 function About({ active }) {
   return (
     <div
-      className={`about__container ${active == "about" && "active"}`}
+      className={`about__container ${active === "about" && "active"}`}
       id="about"
     >
       <div className="about">

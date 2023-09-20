@@ -33,7 +33,7 @@ function Contact({ active }) {
 
   return (
     <div
-      className={`contact__container ${active == "contact" && "active"}`}
+      className={`contact__container ${active === "contact" && "active"}`}
       id="contact"
     >
       <h1 className="contact__title mobile-only">Contact</h1>

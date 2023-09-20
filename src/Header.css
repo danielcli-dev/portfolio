@@ -11,14 +11,12 @@ a {
   background-color: var(--bg-normal);
   padding: 3vw;
   height: 85%;
-  background-color: red;
 }
 
 .header__intro {
   display: flex;
   flex-direction: column;
   flex: 1;
-  background: pink;
 }
 .header__name {
   margin-bottom: 6px;

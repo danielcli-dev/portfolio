@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./ProjectCard.css";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import LanguageIcon from "@mui/icons-material/Language";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 function ProjectCard({ project }) {
   const [open, setOpen] = useState(false);
@@ -20,7 +22,29 @@ function ProjectCard({ project }) {
           />
         </div>
         <div className="right">
-          <ul className="projects__tech">
+          {project.url && (
+            <a
+              className="right__link"
+              href={project.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LanguageIcon className="right__icon" />
+            </a>
+          )}
+
+          {project.github && (
+            <a
+              className="right__link"
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitHubIcon className="right__icon" />
+            </a>
+          )}
+
+          {/* <ul className="projects__tech">
             {project.tech.map((tech) => {
               return (
                 <li
@@ -42,7 +66,7 @@ function ProjectCard({ project }) {
                 </li>
               );
             })}
-          </ul>
+          </ul> */}
         </div>
       </div>
       {open && (
@@ -53,7 +77,6 @@ function ProjectCard({ project }) {
             ) : (
               <div className="project__cardImage--null">{project.name}</div>
             )}
-
             <div className={`project__cardImageOverlay ${!active && "active"}`}>
               click for more details
             </div>
@@ -62,14 +85,38 @@ function ProjectCard({ project }) {
               className={`project__cardImageText ${active && "active"}`}
               onClick={() => setActive(!active)}
             >
-              Description:
+              {/* Description:
               <br />
-              <br />
+              <br /> */}
               {project.description}
+              <hr className="project__cardImageTextDivider" />
+              <ul className="projects__tech">
+                {project.tech.map((tech) => {
+                  return (
+                    <li
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        width: "object-fit",
+                      }}
+                    >
+                      {tech.icon && (
+                        <img
+                          className="projects__techIcon"
+                          src={tech.icon}
+                          alt={`${tech.name} icon`}
+                        />
+                      )}
+
+                      {tech.name}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           </div>
 
-          <div className="project__cardExtendedFooter">
+          {/* <div className="project__cardExtendedFooter">
             <a href={project.url} target="_blank" rel="noreferrer">
               <button className="project__cardExtendedFooterButton">
                 Website
@@ -80,7 +127,7 @@ function ProjectCard({ project }) {
                 Github
               </button>
             </a>
-          </div>
+          </div> */}
         </div>
       )}
     </div>
