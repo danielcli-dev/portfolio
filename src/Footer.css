@@ -5,6 +5,9 @@
   align-items: flex-end;
 }
 
+.footer__item {
+  cursor: pointer;
+}
 .footer__item > a > .footer__icon {
   opacity: 75%;
   transition: transform 500ms ease-in-out;

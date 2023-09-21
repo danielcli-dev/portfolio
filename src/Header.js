@@ -1,14 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "./Header.css";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import RssFeedIcon from "@mui/icons-material/RssFeed";
-import EmailIcon from "@mui/icons-material/Email";
-import ArticleIcon from "@mui/icons-material/Article";
-import LightModeIcon from "@mui/icons-material/LightMode";
 import Footer from "./Footer";
-import ColorLensIcon from "@mui/icons-material/ColorLens";
 import CloseIcon from "@mui/icons-material/Close";
 
 function Header({ active, setActive, scrollToView }) {
@@ -58,7 +50,7 @@ function Header({ active, setActive, scrollToView }) {
         </svg>
 
         <h2 className="header__title">Web Developer</h2>
-        <p className="header__description">"Ready to build something great."</p>
+        <p className="header__description desktop-only">"Ready to build something great."</p>
       </div>
 
       <nav className={`nav ${open && "open"}`} id="clickbox" ref={ref}>
