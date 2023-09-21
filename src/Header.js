@@ -21,8 +21,7 @@ function Header({ active, setActive, scrollToView }) {
 
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
-      // If the menu is open and the clicked target is not within the menu,
-      // then close the menu
+     
       if (open && ref.current && !ref.current.contains(e.target)) {
         setOpen(false);
       }
@@ -30,7 +29,6 @@ function Header({ active, setActive, scrollToView }) {
     document.addEventListener("mousedown", checkIfClickedOutside);
 
     return () => {
-      // Cleanup the event listener
       document.removeEventListener("mousedown", checkIfClickedOutside);
     };
   }, [open]);
@@ -60,7 +58,7 @@ function Header({ active, setActive, scrollToView }) {
         </svg>
 
         <h2 className="header__title">Web Developer</h2>
-        {/* <p className="header__description">"Ready to build something great."</p> */}
+        <p className="header__description">"Ready to build something great."</p>
       </div>
 
       <nav className={`nav ${open && "open"}`} id="clickbox" ref={ref}>
@@ -113,38 +111,6 @@ function Header({ active, setActive, scrollToView }) {
       <div className="header__footer">
         <Footer />
       </div>
-      {/* <ul className="footer">
-        <li className="footer__item">
-          <a href="https://github.com/danielcli-dev" target="_blank">
-            <GitHubIcon className="footer__icon" />
-          </a>
-        </li>
-        <li className="footer__item">
-          <a href="https://www.linkedin.com/in/danielcli-dev/" target="_blank">
-            <LinkedInIcon className="footer__icon" />
-          </a>
-        </li>
-        <li className="footer__item">
-          <a href="mailto:danielcli.dev@gmail.com&subject=Lets get in touch">
-            <EmailIcon className="footer__icon" />
-          </a>
-        </li>
-
-        <li className="footer__item">
-          <a
-            onClick={() => {
-              let app = document.getElementById("app__container");
-              if (app.classList.contains("dark")) {
-                app.classList.replace("dark", "light");
-              } else {
-                app.classList.replace("light", "dark");
-              }
-            }}
-          >
-            <LightModeIcon className="footer__icon" />
-          </a>
-        </li>
-      </ul> */}
     </div>
   );
 }

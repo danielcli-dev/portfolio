@@ -27,11 +27,6 @@ function Footer() {
         </a>
       </li>
 
-      {/* <li className="footer__item">
-          <a download href="/Daniel Li - Web Developer Resume.pdf">
-            <ArticleIcon className="footer__icon" />
-          </a>
-        </li> */}
       <li className="footer__item">
         <a
           onClick={() => {

@@ -44,29 +44,6 @@ function ProjectCard({ project }) {
             </a>
           )}
 
-          {/* <ul className="projects__tech">
-            {project.tech.map((tech) => {
-              return (
-                <li
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    width: "object-fit",
-                  }}
-                >
-                  {tech.icon && (
-                    <img
-                      className="projects__techIcon"
-                      src={tech.icon}
-                      alt={`${tech.name} icon`}
-                    />
-                  )}
-
-                  {tech.name}
-                </li>
-              );
-            })}
-          </ul> */}
         </div>
       </div>
       {open && (
@@ -84,10 +61,7 @@ function ProjectCard({ project }) {
             <div
               className={`project__cardImageText ${active && "active"}`}
               onClick={() => setActive(!active)}
-            >
-              {/* Description:
-              <br />
-              <br /> */}
+            >        
               {project.description}
               <hr className="project__cardImageTextDivider" />
               <ul className="projects__tech">
@@ -115,19 +89,6 @@ function ProjectCard({ project }) {
               </ul>
             </div>
           </div>
-
-          {/* <div className="project__cardExtendedFooter">
-            <a href={project.url} target="_blank" rel="noreferrer">
-              <button className="project__cardExtendedFooterButton">
-                Website
-              </button>
-            </a>
-            <a href={project.github} target="_blank" rel="noreferrer">
-              <button className="project__cardExtendedFooterButton">
-                Github
-              </button>
-            </a>
-          </div> */}
         </div>
       )}
     </div>

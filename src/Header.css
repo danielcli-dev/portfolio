@@ -64,7 +64,6 @@ a {
   cursor: pointer;
 }
 .nav__item:not(.active):hover {
-  /* color: var(--text-stylish); */
   color: var(--text-stylish);
   transform: translateX(10px);
 }
