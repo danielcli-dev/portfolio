@@ -99,11 +99,14 @@
   border-radius: 15px;
   width: 90%;
   position: relative;
+  background-color: lightgrey;
 }
 .project__cardImage {
   width: 100%;
   height: 100%;
   border-radius: 15px;
+  max-height: 300px;
+  object-fit: contain;
 }
 .project__cardImage--null {
   display: flex;
@@ -226,5 +229,11 @@
   .projects__name {
     font-size: 18px;
   }
-  
+
+  .project__cardImageContainer {
+  }
+  .project__cardImage {
+    max-height: 300px;
+    /* test */
+  }
 }
