@@ -149,9 +149,10 @@
 }
 .right {
   display: flex;
-  padding-right: 20px;
   justify-content: flex-end;
   align-items: center;
+  /* testing */
+  padding-right: 20px;
 }
 .right__link {
   display: flex;
@@ -203,6 +204,9 @@
   }
   .left {
     padding-left: 5px;
+  }
+  .right {
+    padding-right: 0px;
   }
 
   .projects__description {

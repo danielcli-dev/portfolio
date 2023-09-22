@@ -12,7 +12,8 @@ function About({ active }) {
         <div className="about__portrait">
           <img
             className="about__portraitIcon"
-            src="https://api.dicebear.com/5.x/pixel-art/svg?seed=Scooter"
+            // src="https://api.dicebear.com/5.x/pixel-art/svg?seed=Scooter"
+            src="portrait.jpg"
             alt="A
         photograph of me"
           />

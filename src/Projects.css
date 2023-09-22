@@ -1,9 +1,12 @@
 .projects__container {
   display: none;
   flex: 1;
-  overflow: scroll;
   height: 85%;
   padding: 3vw;
+
+/* testing- keep overflow? */
+    /* overflow: scroll; */
+
 }
 
 .projects__container.active {

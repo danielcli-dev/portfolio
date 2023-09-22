@@ -16,7 +16,7 @@ function Projects({ active }) {
           return (
             <>
               <ProjectCard project={project} />{" "}
-              <hr className="projects__divider" />
+              {/* <hr className="projects__divider" /> */}
             </>
           );
         })}

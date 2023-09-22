@@ -26,7 +26,6 @@
   --bg-normal2: #05093cf4;
   --bg-stylish: #fffaf8;
   --bg-shade: rgba(255, 255, 255, 0.073);
-
 }
 
 .light {
@@ -34,9 +33,10 @@
   --text-normal: rgb(0, 0, 0);
   --shadow-normal: rgba(0, 0, 0, 0.065);
   --bg-normal: rgb(253, 253, 253);
-  --bg-normal2: rgb(255, 214, 214);
+  --bg-normal2: rgb(255, 234, 234);
   --bg-stylish: #1e5be0;
-  --bg-shade: rgba(253, 243, 233, 0.721);
+  --bg-shade: rgba(102, 102, 102, 0.073);
+
 }
 
 * {
@@ -47,19 +47,16 @@
   scrollbar-width: none;
 }
 *::-webkit-scrollbar {
-  display: none;
-  width: 0.5rem;
   width: 0.2rem;
 }
 
 *::-webkit-scrollbar-track {
   background: transparent;
-  background: var(--text-normal);
-  background: green;
 }
 
 *::-webkit-scrollbar-thumb {
   background: var(--text-stylish);
+
 }
 
 a,
@@ -80,7 +77,6 @@ body {
   font-family: var(--font-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 h1 {
@@ -116,5 +112,8 @@ ul {
   }
   .mobile-only {
     display: flex;
+  }
+  *::-webkit-scrollbar {
+    display: none;
   }
 }
