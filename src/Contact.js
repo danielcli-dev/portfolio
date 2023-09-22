@@ -3,7 +3,7 @@ import "./Contact.css";
 import { db } from "./firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import SendIcon from "@mui/icons-material/Send";
-
+import Footer from "./Footer";
 function Contact({ active }) {
   const [name, setName] = useState("");
   const [company, setCompany] = useState("");
@@ -88,6 +88,9 @@ function Contact({ active }) {
             </button>
           </form>
         </div>
+      </div>
+      <div className="app__footer mobile-only">
+        <Footer active={active} />
       </div>
     </div>
   );

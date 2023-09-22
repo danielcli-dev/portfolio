@@ -33,9 +33,7 @@ function App() {
         <Projects active={active} />
         <Contact active={active} />
 
-        <div className="app__footer mobile-only">
-          <Footer active={active} />
-        </div>
+       
       </div>
     </div>
   );

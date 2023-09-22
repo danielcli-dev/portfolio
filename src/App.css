@@ -58,13 +58,6 @@
   overflow: hidden;
 }
 
-.app__footer {
-  margin-bottom: 4vh;
-}
-.mobile-only {
-  display: none;
-}
-
 @media (max-width: 1024px) {
   .app__container {
     width: 100%;
@@ -80,7 +73,5 @@
     overflow-y: scroll;
     justify-content: flex-start;
   }
-  .mobile-only {
-    display: flex;
-  }
+ 
 }

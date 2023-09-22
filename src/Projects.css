@@ -4,9 +4,8 @@
   height: 85%;
   padding: 3vw;
 
-/* testing- keep overflow? */
-    /* overflow: scroll; */
-
+  /* testing- keep overflow? */
+  /* overflow: scroll; */
 }
 
 .projects__container.active {

@@ -131,18 +131,24 @@ textarea:focus {
 .submitButtonConfirmed.active {
   display: flex;
 }
-
+.app__footer {
+  display: flex;
+  justify-content: center;
+}
+.mobile-only {
+  display: none;
+}
 @media (max-width: 1024px) {
   .contact__container {
     display: flex;
     flex-direction: column;
     padding: 6vw;
-    height: fit-content;
-    height: 5500px;
   }
   .contact {
     flex: none;
-    height: 70vh;
+    flex-direction: column;
+    margin-bottom: 30px;
+
   }
 
   .contact__box {
@@ -151,8 +157,11 @@ textarea:focus {
   .contact__box > input {
     margin-bottom: 1.1rem;
   }
-  
+
   .contact__box .contact__label {
     font-size: 14px;
+  }
+  .mobile-only {
+    display: flex;
   }
 }
