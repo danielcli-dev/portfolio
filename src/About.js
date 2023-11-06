@@ -20,14 +20,13 @@ function About({ active }) {
         </div>
         <h1 className="about__title mobile-only">Hello!</h1>
         My name is Daniel and I am looking to build some great websites and
-        apps. I used to be a structural engineer which was pretty cool, but I
-        always wanted to work in the tech field. It's really amazing what you
-        can do with some coding.
+        apps. I have a background in structural engineering which have developed my skills in problem solving, critical thinking, time management, communication, and many more. Working in engineering was very rewarding, but I
+        had always wanted to work in the tech field. It's really amazing what you can create with coding.
         <br />
         <br />
         To jump start my career in Web Development, I attended the Full-Stack
         Web Development Course by CareerFoundry. Through my studies, I have
-        learned to create front-end websites using React and Angular, APIs using
+        learned how to develop the websites using React and Angular, APIs using
         Express, Databases using MongoDB, and more!
       </div>
       <a
