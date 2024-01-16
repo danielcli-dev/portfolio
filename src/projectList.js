@@ -148,33 +148,33 @@ export const projectList = [
       },
     ],
   },
-  {
-    url: "https://clone-b45fd.web.app/",
-    github: "https://github.com/danielcli-dev/youtube-clone",
-    image:
-      "https://github.com/danielcli-dev/website-portfolio/blob/master/img/youtube_screenshot.png?raw=true",
-    name: "Youtube Clone",
-    description: `Youtube clone with search functionality to filter videos. Within this project, I was responsible for the frontend and backend.
-      It’s written in React.js and uses CSS for styling.`,
-    tech: [
-      {
-        name: "React",
-        icon: ReactIcon,
-      },
-      {
-        name: "CSS",
-        icon: CSSIcon,
-      },
-      {
-        name: "JavaScript",
-        icon: JavascriptIcon,
-      },
-      {
-        name: "Firebase",
-        icon: FirebaseIcon,
-      },
-    ],
-  },
+  // {
+  //   url: "https://clone-b45fd.web.app/",
+  //   github: "https://github.com/danielcli-dev/youtube-clone",
+  //   image:
+  //     "https://github.com/danielcli-dev/website-portfolio/blob/master/img/youtube_screenshot.png?raw=true",
+  //   name: "Youtube Clone",
+  //   description: `Youtube clone with search functionality to filter videos. Within this project, I was responsible for the frontend and backend.
+  //     It’s written in React.js and uses CSS for styling.`,
+  //   tech: [
+  //     {
+  //       name: "React",
+  //       icon: ReactIcon,
+  //     },
+  //     {
+  //       name: "CSS",
+  //       icon: CSSIcon,
+  //     },
+  //     {
+  //       name: "JavaScript",
+  //       icon: JavascriptIcon,
+  //     },
+  //     {
+  //       name: "Firebase",
+  //       icon: FirebaseIcon,
+  //     },
+  //   ],
+  // },
   {
     url: "https://danielcli-dev.github.io/pokedex-project/",
     github: "https://github.com/danielcli-dev/pokedex-project",
@@ -199,7 +199,7 @@ export const projectList = [
     ],
   },
   {
-    url: "https://cfdb-movie-api-59ec69f25db6.herokuapp.com/",
+    // url: "https://cfdb-movie-api-59ec69f25db6.herokuapp.com/",
     github: "https://github.com/danielcli-dev/movie_api",
     name: "Movie API",
     description: `API used to transfer data about movies, directors, genres, etc. Written and tested using JavaScript and NodeJS. All data are stored in a MongoDB database.`,
@@ -221,6 +221,7 @@ export const projectList = [
   {
     url: "https://myflix-movieapp.netlify.app/",
     github: "https://github.com/danielcli-dev/myFlix-client",
+    casestudy: "https://danielcli.com/case-study/1",
     name: "myFlix",
     description: `myFlix is a web app containing information pertaining to movies. It allows users to sign in and save their favorite movies.`,
     image:

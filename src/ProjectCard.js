@@ -3,7 +3,7 @@ import "./ProjectCard.css";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import LanguageIcon from "@mui/icons-material/Language";
 import GitHubIcon from "@mui/icons-material/GitHub";
-
+import ArticleIcon from '@mui/icons-material/Article';
 function ProjectCard({ project }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
@@ -41,6 +41,17 @@ function ProjectCard({ project }) {
               rel="noreferrer"
             >
               <GitHubIcon className="right__icon" />
+            </a>
+          )}
+
+          {project.casestudy && (
+            <a
+              className="right__link"
+              href={project.casestudy}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ArticleIcon className="right__icon" alt="Case Study"/>
             </a>
           )}
 

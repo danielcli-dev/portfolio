@@ -89,6 +89,7 @@
 
 .about__resume {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: fit-content;
@@ -96,7 +97,7 @@
   border-radius: 10px;
   color: var(--bg-normal);
   background-color: var(--text-stylish);
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .about__resume:hover {
@@ -108,6 +109,9 @@
 
 .about__resumeText {
   font-size: clamp(14px, 1.5vw, 18px);
+}
+.only-mobile {
+  display: none;
 }
 
 @media (max-width: 1024px) {
@@ -139,5 +143,14 @@
   }
   .about__portrait {
     margin-bottom: 15px;
+  }
+  .only-mobile {
+    display: block;
+  }
+
+  .about__resume.only-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

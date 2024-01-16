@@ -20,8 +20,11 @@ function About({ active }) {
         </div>
         <h1 className="about__title mobile-only">Hello!</h1>
         My name is Daniel and I am looking to build some great websites and
-        apps. I have a background in structural engineering which have developed my skills in problem solving, critical thinking, time management, communication, and many more. Working in engineering was very rewarding, but I
-        had always wanted to work in the tech field. It's really amazing what you can create with coding.
+        apps. I have a background in structural engineering which have developed
+        my skills in problem solving, critical thinking, time management,
+        communication, and many more. Working in engineering was very rewarding,
+        but I had always wanted to work in the tech field. It's really amazing
+        what you can create with coding.
         <br />
         <br />
         To jump start my career in Web Development, I attended the Full-Stack
@@ -30,12 +33,12 @@ function About({ active }) {
         Express, Databases using MongoDB, and more!
       </div>
       <a
-        className="about__resume"
+        className="about__resume only-mobile"
         download
         href="/Daniel Li - Web Developer Resume.pdf"
       >
         <ArticleIcon className="about__resumeIcon" />
-        <p className="about__resumeText">Download Resume (44.7 KB)</p>
+        <span className="about__resumeText">Download Resume (44.7 KB)</span>
       </a>
     </div>
   );

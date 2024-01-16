@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import About from "./About";
 import Projects from "./Projects";
-import Contact from "./Contact";
-import Footer from "./Footer";
+import CaseStudy from "./CaseStudy";
+// import Contact from "./Contact";
 
 function App() {
   const [active, setActive] = useState("about");
@@ -21,21 +21,39 @@ function App() {
     }
   }
   return (
-    <div id="app__container" className="app__container dark">
-      <div id="app" className="app">
-        <Header
-          active={active}
-          setActive={setActive}
-          scrollToView={scrollToView}
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <React.Fragment>
+              <div id="app__container" className="app__container dark">
+                <div id="app" className="app">
+                  <Header
+                    active={active}
+                    setActive={setActive}
+                    scrollToView={scrollToView}
+                  />
+
+                  <About active={active} />
+                  <Projects active={active} />
+                  {/* <Contact active={active} /> */}
+                </div>
+              </div>
+            </React.Fragment>
+          }
         />
 
-        <About active={active} />
-        <Projects active={active} />
-        <Contact active={active} />
-
-       
-      </div>
-    </div>
+        <Route
+          path="/case-study/:projectId"
+          element={
+            <React.Fragment>
+              <CaseStudy />
+            </React.Fragment>
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "./Header.css";
 import Footer from "./Footer";
 import CloseIcon from "@mui/icons-material/Close";
+import ArticleIcon from "@mui/icons-material/Article";
 
 function Header({ active, setActive, scrollToView }) {
   const [open, setOpen] = useState(false);
@@ -13,7 +14,6 @@ function Header({ active, setActive, scrollToView }) {
 
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
-     
       if (open && ref.current && !ref.current.contains(e.target)) {
         setOpen(false);
       }
@@ -50,7 +50,9 @@ function Header({ active, setActive, scrollToView }) {
         </svg>
 
         <h2 className="header__title">Web Developer</h2>
-        <p className="header__description desktop-only">"Ready to build something great."</p>
+        <p className="header__description desktop-only">
+          "Ready to build something great."
+        </p>
       </div>
 
       <nav className={`nav ${open && "open"}`} id="clickbox" ref={ref}>
@@ -83,7 +85,7 @@ function Header({ active, setActive, scrollToView }) {
         >
           <strong>PROJECTS</strong>
         </div>
-        <div
+        {/* <div
           href="/"
           onClick={() => {
             scrollToView("contact");
@@ -93,7 +95,16 @@ function Header({ active, setActive, scrollToView }) {
           className={`nav__item ${active === "contact" ? "active" : null}`}
         >
           <strong>CONTACT FORM</strong>
-        </div>
+        </div> */}
+
+        <a
+          className="about__resume"
+          download
+          href="/Daniel Li - Web Developer Resume.pdf"
+        >
+          <ArticleIcon className="about__resumeIcon" />
+          <p className="about__resumeText">Download Resume (44.7 KB)</p>
+        </a>
 
         <div className="nav__footer mobile-only">
           <Footer />
