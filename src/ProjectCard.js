@@ -28,6 +28,7 @@ function ProjectCard({ project }) {
               href={project.url}
               target="_blank"
               rel="noreferrer"
+              title="Website Link"
             >
               <LanguageIcon className="right__icon" />
             </a>
@@ -39,6 +40,7 @@ function ProjectCard({ project }) {
               href={project.github}
               target="_blank"
               rel="noreferrer"
+              title="Github Link"
             >
               <GitHubIcon className="right__icon" />
             </a>
