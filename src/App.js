@@ -5,7 +5,6 @@ import Header from "./Header";
 import About from "./About";
 import Projects from "./Projects";
 import CaseStudy from "./CaseStudy";
-// import Contact from "./Contact";
 
 function App() {
   const [active, setActive] = useState("about");
@@ -37,7 +36,6 @@ function App() {
 
                   <About active={active} />
                   <Projects active={active} />
-                  {/* <Contact active={active} /> */}
                 </div>
               </div>
             </React.Fragment>
@@ -45,7 +43,7 @@ function App() {
         />
 
         <Route
-          path="/case-study/:projectId"
+          path="/case-study/:projectName"
           element={
             <React.Fragment>
               <CaseStudy />

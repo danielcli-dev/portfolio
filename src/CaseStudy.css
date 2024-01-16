@@ -61,12 +61,29 @@ h4 {
   flex: 1;
   padding: 10px;
 }
+
 .casestudy__subsection > div {
+  margin: 10px;
+}
+
+.casestudy__subsection-tall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+}
+
+.casestudy__subsection-tall > div {
   margin: 10px;
 }
 .casestudy__image {
   width: 100%;
-  height: auto;
+  max-height: 500px;
+}
+.casestudy__image-tall {
+  width: 50%;
 }
 .casestudy__footer {
   display: flex;
@@ -96,7 +113,6 @@ h4 {
 
 @media (max-width: 1024px) {
   .casestudy__title {
-    
     margin: 15px;
   }
   .casestudy__section {

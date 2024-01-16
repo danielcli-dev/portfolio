@@ -3,7 +3,7 @@ import "./ProjectCard.css";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import LanguageIcon from "@mui/icons-material/Language";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import ArticleIcon from '@mui/icons-material/Article';
+import ArticleIcon from "@mui/icons-material/Article";
 function ProjectCard({ project }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
@@ -50,11 +50,11 @@ function ProjectCard({ project }) {
               href={project.casestudy}
               target="_blank"
               rel="noreferrer"
+              title="Case Study"
             >
-              <ArticleIcon className="right__icon" alt="Case Study"/>
+              <ArticleIcon className="right__icon" />
             </a>
           )}
-
         </div>
       </div>
       {open && (
@@ -72,7 +72,7 @@ function ProjectCard({ project }) {
             <div
               className={`project__cardImageText ${active && "active"}`}
               onClick={() => setActive(!active)}
-            >        
+            >
               {project.description}
               <hr className="project__cardImageTextDivider" />
               <ul className="projects__tech">
