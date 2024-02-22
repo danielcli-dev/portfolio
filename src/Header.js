@@ -49,7 +49,7 @@ function Header({ active, setActive, scrollToView }) {
           <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
         </svg>
 
-        <h2 className="header__title">Web Developer</h2>
+        <h3 className="header__title">Web Developer</h3>
         <p className="header__description desktop-only">
           "Ready to build something great."
         </p>
