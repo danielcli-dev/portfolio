@@ -1,4 +1,5 @@
-import React, { useParams } from "react";
+import React from "react";
+import { useParams } from "react-router-dom";
 import "./CaseStudy.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import GitHubIcon from "@mui/icons-material/GitHub";
