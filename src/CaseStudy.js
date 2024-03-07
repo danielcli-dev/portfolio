@@ -1,15 +1,8 @@
-import React, { useState } from "react";
-import { db } from "./firebase";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import SendIcon from "@mui/icons-material/Send";
-import { useParams } from "react-router-dom";
+import React from "react";
 import "./CaseStudy.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import EmailIcon from "@mui/icons-material/Email";
-import LightModeIcon from "@mui/icons-material/LightMode";
 
 function CaseStudy() {
   const { projectName } = useParams();
@@ -47,7 +40,11 @@ function CaseStudy() {
               </div>
             </div>
             <div className="casestudy__subsection">
-              <img className="casestudy__image" src="/myflix-casestudy1.png" />
+              <img
+                className="casestudy__image"
+                src="/myflix-casestudy1.png"
+                alt="My Flix Image 1"
+              />
             </div>
           </div>
 
@@ -75,7 +72,11 @@ function CaseStudy() {
               </div>
             </div>
             <div className="casestudy__subsection">
-              <img className="casestudy__image" src="/myflix-casestudy2.png" />
+              <img
+                className="casestudy__image"
+                src="/myflix-casestudy2.png"
+                alt="My Flix Image 2"
+              />
             </div>
           </div>
           <div className="casestudy__section">
@@ -99,7 +100,11 @@ function CaseStudy() {
               </div>
             </div>
             <div className="casestudy__subsection">
-              <img className="casestudy__image" src="/myflix-casestudy3.png" />
+              <img
+                className="casestudy__image"
+                src="/myflix-casestudy3.png"
+                alt="My Flix Image 3"
+              />
             </div>
           </div>
           <div className="casestudy__section">
@@ -167,6 +172,7 @@ function CaseStudy() {
               <img
                 className="casestudy__image-tall"
                 src="/chat-casestudy1.png"
+                alt="Chat Image 1"
               />
             </div>
           </div>
@@ -183,7 +189,11 @@ function CaseStudy() {
               </div>
             </div>
             <div className="casestudy__subsection">
-              <img className="casestudy__image" src="/chat-casestudy2.png" />
+              <img
+                className="casestudy__image"
+                src="/chat-casestudy2.png"
+                alt="Chat Image 2"
+              />
             </div>
           </div>
           <div className="casestudy__section">
@@ -214,6 +224,7 @@ function CaseStudy() {
               <img
                 className="casestudy__image-tall"
                 src="/chat-casestudy3.png"
+                alt="Chat Image 3"
               />
             </div>
           </div>
@@ -282,6 +293,7 @@ function CaseStudy() {
               <img
                 className="casestudy__image"
                 src="/shopaholic-casestudy1.png"
+                alt="Shopaholic Image 1"
               />
             </div>
           </div>
@@ -305,6 +317,7 @@ function CaseStudy() {
               <img
                 className="casestudy__image"
                 src="/shopaholic-casestudy2.png"
+                alt="Shopaholic Image 2"
               />
             </div>
           </div>
@@ -386,6 +399,7 @@ function CaseStudy() {
               <img
                 className="casestudy__image"
                 src="/spoileralert-casestudy1.png"
+                alt="Spoiler Alert Image 1"
               />
             </div>
           </div>
@@ -407,6 +421,7 @@ function CaseStudy() {
               <img
                 className="casestudy__image"
                 src="/spoileralert-casestudy2.png"
+                alt="Spoiler Alert Image 2"
               />
             </div>
           </div>
