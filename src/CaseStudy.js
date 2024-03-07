@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useParams } from "react";
 import "./CaseStudy.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
 
 function CaseStudy() {
   const { projectName } = useParams();
