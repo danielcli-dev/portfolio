@@ -45,7 +45,7 @@ function CaseStudy() {
               <img
                 className="casestudy__image"
                 src="/myflix-casestudy1.png"
-                alt="My Flix Image 1"
+                alt="My Flix 1"
               />
             </div>
           </div>
@@ -77,7 +77,7 @@ function CaseStudy() {
               <img
                 className="casestudy__image"
                 src="/myflix-casestudy2.png"
-                alt="My Flix Image 2"
+                alt="My Flix 2"
               />
             </div>
           </div>
@@ -105,7 +105,7 @@ function CaseStudy() {
               <img
                 className="casestudy__image"
                 src="/myflix-casestudy3.png"
-                alt="My Flix Image 3"
+                alt="My Flix 3"
               />
             </div>
           </div>
@@ -174,7 +174,7 @@ function CaseStudy() {
               <img
                 className="casestudy__image-tall"
                 src="/chat-casestudy1.png"
-                alt="Chat Image 1"
+                alt="Chat 1"
               />
             </div>
           </div>
@@ -194,7 +194,7 @@ function CaseStudy() {
               <img
                 className="casestudy__image"
                 src="/chat-casestudy2.png"
-                alt="Chat Image 2"
+                alt="Chat 2"
               />
             </div>
           </div>
@@ -226,7 +226,7 @@ function CaseStudy() {
               <img
                 className="casestudy__image-tall"
                 src="/chat-casestudy3.png"
-                alt="Chat Image 3"
+                alt="Chat 3"
               />
             </div>
           </div>
@@ -295,7 +295,7 @@ function CaseStudy() {
               <img
                 className="casestudy__image"
                 src="/shopaholic-casestudy1.png"
-                alt="Shopaholic Image 1"
+                alt="Shopaholic 1"
               />
             </div>
           </div>
@@ -319,7 +319,7 @@ function CaseStudy() {
               <img
                 className="casestudy__image"
                 src="/shopaholic-casestudy2.png"
-                alt="Shopaholic Image 2"
+                alt="Shopaholic 2"
               />
             </div>
           </div>
