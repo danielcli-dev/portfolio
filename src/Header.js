@@ -51,7 +51,7 @@ function Header({ active, setActive, scrollToView }) {
 
         <h3 className="header__title">Web Developer</h3>
         <p className="header__description desktop-only">
-          "Ready to build something great!"
+          "Ready to build something great"
         </p>
       </div>
 
