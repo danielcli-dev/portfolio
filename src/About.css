@@ -53,7 +53,7 @@
 }
 
 .about__portraitIcon {
-  background-color: var(--text-stylish);
+  background-color: rgb(78, 78, 78);
   border-radius: 50%;
   width: clamp(200px, 40vw, 250px);
   height: clamp(200px, 40vw, 250px);
