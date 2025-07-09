@@ -53,8 +53,8 @@
 }
 
 .about__portraitIcon {
-  background-color: black;
-  border-radius: 50%;
+  /* background-color: black; */
+  /* border-radius: 50%; */
   width: clamp(200px, 40vw, 250px);
   height: clamp(200px, 40vw, 250px);
 }
