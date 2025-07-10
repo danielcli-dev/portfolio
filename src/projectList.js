@@ -126,9 +126,9 @@ export const projectList = [
     url: "https://whatsapp-1da63.web.app/",
     github: "https://github.com/danielcli-dev/whatsapp-clone",
     image:
-      "https://github.com/danielcli-dev/portfolio/blob/main/public/whatsapp_screenshot.png?raw=true",
-    name: "What's App Clone",
-    description: `Whats App clone which functionality to create unique chatrooms that allow messages from different users. Messages display user's own messages on the right in green and other users' messages on the left in white. The app uses Google Auth to allow users to sign in using their Google profile. Also, I have used Material-UI icons to design the
+      "https://github.com/danielcli-dev/portfolio/blob/main/public/talktome-icon.png?raw=true",
+    name: "Talk to Me",
+    description: `Chatroom App includes functionality to create unique chatrooms that allow messages from different users. Messages display user's own messages on the right in green and other users' messages on the left in white. The app uses Google Auth to allow users to sign in using their Google profile. Also, I have used Material-UI icons to design the
       website, as well as, used Firestore Database to save chat rooms and
       messages.`,
     tech: [
