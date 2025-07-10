@@ -11,15 +11,30 @@ function Projects({ active }) {
     >
       <div className="projects">
         <h1 className="projects__title mobile-only">Projects</h1>
+        <div className="projects__box">
+          {projectList.map((project) => {
+            return (
+              <>
+                <div className="project__app">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    title="Website Link"
+                  >
+                    <div className="project-icon" onClick={() => {}}>
+                      <img src={project.image} />
 
-        {projectList.map((project) => {
-          return (
-            <>
-              <ProjectCard project={project} />{" "}
-              {/* <hr className="projects__divider" /> */}
-            </>
-          );
-        })}
+                      {/* <ProjectCard project={project} />{" "} */}
+                      {/* <hr className="projects__divider" /> */}
+                    </div>
+                  </a>
+                  <p>{project.name}</p>
+                </div>
+              </>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

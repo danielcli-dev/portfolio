@@ -19,8 +19,8 @@ function About({ active }) {
           />
         </div>
         <h1 className="about__title mobile-only">Hello!</h1>
-        My name is Daniel and I am looking to build some great websites and
-        apps. I have a background in structural engineering which have developed
+        My name is Daniel and I enjoy building websites and
+        apps from scratch. I have a background in structural engineering which have developed
         my skills in problem solving, critical thinking, time management,
         communication, and many more. Working in engineering was very rewarding,
         but I had always wanted to work in the tech field. It's really amazing

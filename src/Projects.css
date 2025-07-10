@@ -14,10 +14,8 @@
 
 .projects {
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  flex-direction: row;
   overflow-y: scroll;
-  width: 100%;
 }
 
 .projects__image {
@@ -45,6 +43,36 @@
   border: solid 1px var(--text-stylish);
   display: block;
 }
+.projects__box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.project__app {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+  margin: 20px;
+}
+
+.project-icon {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  height: fit-content;
+  width: fit-content;
+  overflow: hidden;
+}
+
+.project-icon > img {
+  width: 100px;
+  height: 100px;
+}
+.project-icon:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
 
 @media (max-width: 1024px) {
   .projects__container {
@@ -56,6 +84,7 @@
     height: fit-content;
   }
   .projects {
+    flex-direction: column;
     width: 100%;
     overflow-y: initial;
   }
