@@ -42,7 +42,7 @@ export const projectList = [
     github: "https://github.com/danielcli-dev/shopaholic",
     casestudy: "https://danielcli.com/case-study/shopaholic",
     image:
-      "https://github.com/danielcli-dev/portfolio/blob/main/public/shopaholic_icon.png?raw=true",
+      "https://github.com/danielcli-dev/portfolio/blob/main/public/shopaholic-icon.png?raw=true",
     name: "Shopaholic",
     description: `Simple e-commerce website for selling clothing and accessories. Allows for users to login with shopping basket that retains added items and a orders list for previous purchases. It also has search, filter and sort functionality. Using stripe, fake orders can be placed at checkout screen. Within this project, I was responsible for the frontend and backend.
       It’s written in React.js.  Also, I used Google Firestore to save data and used
