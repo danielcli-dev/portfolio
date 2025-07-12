@@ -29,7 +29,7 @@ function Projects({ active }) {
                       {/* <hr className="projects__divider" /> */}
                     </div>
                   </a>
-                  <p>{project.name}</p>
+                  {/* <p>{project.name}</p> */}
                 </div>
               </>
             );

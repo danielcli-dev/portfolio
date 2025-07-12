@@ -123,8 +123,8 @@ export const projectList = [
   //   ],
   // },
   {
-    url: "https://whatsapp-1da63.web.app/",
-    github: "https://github.com/danielcli-dev/whatsapp-clone",
+    url: "https://talktome-fa383.web.app/",
+    github: "https://github.com/danielcli-dev/talktome",
     image:
       "https://github.com/danielcli-dev/portfolio/blob/main/public/talktome-icon.png?raw=true",
     name: "Talk to Me",
